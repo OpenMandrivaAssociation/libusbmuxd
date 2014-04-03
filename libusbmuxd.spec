@@ -16,8 +16,8 @@ BuildRequires:	pkgconfig(libplist) >=1.11
 BuildRequires:	cmake
 
 %description
-libusbmuxd is a library for the usbmuxd daemon which is used for communicating with Apple 
-devices which allows simultaeneous access to multiple services on the device.
+libusbmuxd provides support for the usbmuxd daemon that communicates with Apple 
+devices. It allows simultaeneous access to multiple device services.
 
 %package -n %{libname}
 Group:		System/Libraries
