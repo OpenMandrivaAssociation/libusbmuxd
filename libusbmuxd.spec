@@ -4,7 +4,7 @@
 
 Summary:	Library to support the usbmuxd daemon that communicates with Apple's iPod Touch and iPhone.
 Name:		libusbmuxd
-Version:	1.09
+Version:	1.0.9
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
