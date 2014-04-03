@@ -2,7 +2,7 @@
 %define libname %mklibname usbmuxd %{major}
 %define devname %mklibname -d usbmuxd
 
-Summary:	C Library for usbmuxd which communicates with Apple devices
+Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
 Version:	1.0.9
 Release:	1
@@ -21,10 +21,10 @@ devices which allows simultaeneous access to multiple services on the device.
 
 %package -n %{libname}
 Group:		System/Libraries
-Summary:	Library for manipulating Apple Binary and XML Property Lists
+Summary:	Library that provides support for the usbmuxd daeon.
 
 %description -n %{libname}
-libusbmuxd is a library that provideds support for the usbmuxd daeon.
+libusbmuxd is a library that provides support for the usbmuxd daeon.
 
 %package -n %{devname}
 Summary:	Development package for libusbmuxd
