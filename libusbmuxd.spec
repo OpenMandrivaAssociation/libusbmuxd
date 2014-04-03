@@ -2,7 +2,7 @@
 %define libname %mklibname usbmuxd %{major}
 %define devname %mklibname -d usbmuxd
 
-Summary:	Supporting C Library for the usbmuxd daemon which communicates with Apple's devices
+Summary:	C Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
 Version:	1.0.9
 Release:	1
@@ -16,9 +16,8 @@ BuildRequires:	pkgconfig(libplist) >=1.11
 BuildRequires:	cmake
 
 %description
-libusbmuxd is a supporting library for usbmuxd daemon which is used for communicating with Apple's ipod Touch and iPhone 
-devices which allows simultaeneous access to multiple services 
-on the device.
+libusbmuxd is a library for the usbmuxd daemon which is used for communicating with Apple 
+devices which allows simultaeneous access to multiple services on the device.
 
 %package -n %{libname}
 Group:		System/Libraries
