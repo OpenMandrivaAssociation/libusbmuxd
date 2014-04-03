@@ -2,13 +2,13 @@
 %define libname %mklibname usbmuxd %{major}
 %define devname %mklibname -d usbmuxd
 
-Summary:	Library to support the usbmuxd daemon that communicates with Apple's iPod Touch and iPhone.
+Summary:	Supporting C Library for the usbmuxd daemon which communicates with Apple's devices
 Name:		libusbmuxd
 Version:	1.0.9
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
-Url:		http://www.libimobiledevice.org/
+Url:		http://www.libimobiledevice.org/ 
 Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libusb-1.0)
@@ -23,7 +23,6 @@ on the device.
 %package -n %{libname}
 Group:		System/Libraries
 Summary:	Library for manipulating Apple Binary and XML Property Lists
-#Suggests:	%{name} >= %{version}-%{release}
 
 %description -n %{libname}
 libusbmuxd is a library that provideds support for the usbmuxd daeon.
@@ -56,7 +55,7 @@ export CMAKE_PREFIX_PATH=/usr
 %{_libdir}/libusbmuxd.so.%{version}
 
 
-%files -n %{develname}
+%files -n %{devname}
 %doc README.devel
 %{_includedir}/*.h
 %{_libdir}/libusbmuxd.so
