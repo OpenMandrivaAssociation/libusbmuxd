@@ -13,18 +13,17 @@ Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libplist) >=1.11
-BuildRequires:	cmake
 
 %description
 libusbmuxd provides support for the usbmuxd daemon that communicates with Apple 
-devices. It allows simultaeneous access to multiple device services.
+devices. It allows simultaeneous access to multiple device services
 
 %package -n %{libname}
 Group:		System/Libraries
-Summary:	Library that provides support for the usbmuxd daeon.
+Summary:	Library that provides support for the usbmuxd daeon
 
 %description -n %{libname}
-libusbmuxd is a library that provides support for the usbmuxd daeon.
+libusbmuxd is a library that provides support for the usbmuxd daeon
 
 %package -n %{devname}
 Summary:	Development package for libusbmuxd
@@ -39,23 +38,22 @@ Provides:	%{name}-devel = %{version}-%{release}
 %setup -q
 
 %build
-export CMAKE_PREFIX_PATH=/usr
-%cmake
+%configure \
+			--disable-static
 
 %make
 
 %install
-%makeinstall_std -C build
-
+%makeinstall_std 
 
 %files
+%{_bindir}/iproxy
+
 %files -n %{libname}
 %{_libdir}/libusbmuxd.so.%{major}*
-%{_libdir}/libusbmuxd.so.%{version}
 
 
 %files -n %{devname}
-%doc README.devel
 %{_includedir}/*.h
 %{_libdir}/libusbmuxd.so
 %{_libdir}/pkgconfig/libusbmuxd.pc
