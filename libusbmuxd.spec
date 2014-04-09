@@ -38,8 +38,8 @@ Provides:	%{name}-devel = %{version}-%{release}
 %setup -q
 
 %build
-%configure \
-			--disable-static
+%configure2_5x \
+	--disable-static
 
 %make
 
@@ -52,9 +52,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 %files -n %{libname}
 %{_libdir}/libusbmuxd.so.%{major}*
 
-
 %files -n %{devname}
 %{_includedir}/*.h
 %{_libdir}/libusbmuxd.so
 %{_libdir}/pkgconfig/libusbmuxd.pc
-
