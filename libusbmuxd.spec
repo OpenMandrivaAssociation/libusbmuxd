@@ -16,7 +16,8 @@ BuildRequires:	pkgconfig(libplist) >=1.11
 
 %description
 libusbmuxd provides support for the usbmuxd daemon that communicates with Apple 
-devices. It allows simultaeneous access to multiple device services
+devices. It allows simultaeneous access to multiple device services supported by 
+libimobiledevice
 
 %package -n %{libname}
 Group:		System/Libraries
