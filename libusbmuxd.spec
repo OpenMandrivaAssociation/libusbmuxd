@@ -1,4 +1,4 @@
-%define major 2
+%define major 4
 %define libname %mklibname usbmuxd %{major}
 %define devname %mklibname -d usbmuxd
 
