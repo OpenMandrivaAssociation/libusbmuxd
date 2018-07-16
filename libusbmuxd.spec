@@ -12,7 +12,7 @@ Url:		http://www.libimobiledevice.org/
 Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libusb-1.0)
-BuildRequires:	pkgconfig(libplist) >=1.12
+BuildRequires:	pkgconfig(libplist) >= 1.12
 
 %description
 libusbmuxd provides support for the usbmuxd daemon
