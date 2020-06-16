@@ -4,7 +4,7 @@
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	2.0.1
+Version:	2.0.2
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -44,10 +44,10 @@ NOCONFIGURE=1 ./autogen.sh
 %configure \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std 
+%make_install
 
 %files
 %{_bindir}/inetcat
