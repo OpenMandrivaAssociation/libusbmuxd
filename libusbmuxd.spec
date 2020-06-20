@@ -39,7 +39,6 @@ Provides:	%{name}-devel = %{version}-%{release}
 
 %prep
 %setup -q
-NOCONFIGURE=1 ./autogen.sh
 
 %build
 %configure \
