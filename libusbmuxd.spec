@@ -5,12 +5,12 @@
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	2.0.2
+Version:	02022021
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/ 
-Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.gz
+Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libplist-2.0) >= 2.2.0
@@ -41,6 +41,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 %setup -q
 
 %build
+./autogen.sh
 %configure \
 	--disable-static
 
