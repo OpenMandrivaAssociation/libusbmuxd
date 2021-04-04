@@ -5,7 +5,7 @@
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	02022021
+Version:	20210202
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
