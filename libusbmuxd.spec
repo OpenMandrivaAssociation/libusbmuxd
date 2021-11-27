@@ -3,10 +3,12 @@
 %define libname %mklibname usbmuxd %{api} %{major}
 %define devname %mklibname -d usbmuxd
 
+%define	git	20211124
+
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	20210202
-Release:	1
+Version:	2.0.3
+Release:	1.%{git}1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/ 
@@ -14,6 +16,7 @@ Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libplist-2.0) >= 2.2.0
+BuildRequires:	pkgconfig(libimobiledevice-1.0)
 
 %description
 libusbmuxd provides support for the usbmuxd daemon
