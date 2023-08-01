@@ -21,7 +21,6 @@ Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libplist-2.0) >= 2.2.0
-BuildRequires:	pkgconfig(libimobiledevice-1.0)
 BuildRequires:	pkgconfig(libimobiledevice-glue-1.0)
 
 %description
