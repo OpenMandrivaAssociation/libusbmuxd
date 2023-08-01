@@ -1,18 +1,23 @@
 %define major	6
 %define api	2.0
-%define libname %mklibname usbmuxd %{api} %{major}
+%define oldlibname %mklibname usbmuxd %{api} %{major}
+%define libname %mklibname usbmuxd %{api}
 %define devname %mklibname -d usbmuxd
 
-%define	git	20211124
+%define	git	20230802
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
 Version:	2.0.3
-Release:	1.%{git}1
+Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/ 
+%if 0%{?git:1}
+Source0:	https://github.com/libimobiledevice/libusbmuxd/archive/refs/heads/master.tar.gz#/%{name}-%{git}.tar.gz
+%else
 Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
+%endif
 
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libplist-2.0) >= 2.2.0
@@ -28,6 +33,7 @@ services supported by libimobiledevice
 %package -n %{libname}
 Group:		System/Libraries
 Summary:	Library that provides support for the usbmuxd daeon
+Obsoletes:	%{oldlibname} < %{EVRD}
 
 %description -n %{libname}
 libusbmuxd is a library that provides support for the usbmuxd daeon
@@ -42,13 +48,13 @@ Provides:	%{name}-devel = %{version}-%{release}
 %{name}, development headers and libraries.
 
 %prep
-%setup -q
-
-%build
+%autosetup -p1 -n %{name}-%{?git:master}%{!?git:%{version}}
+echo %{version} >.tarball-version
 ./autogen.sh
 %configure \
 	--disable-static
 
+%build
 %make_build
 
 %install
