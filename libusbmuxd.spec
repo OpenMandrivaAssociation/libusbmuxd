@@ -9,7 +9,7 @@
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
 Version:	2.0.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/ 
@@ -32,7 +32,7 @@ services supported by libimobiledevice
 %package -n %{libname}
 Group:		System/Libraries
 Summary:	Library that provides support for the usbmuxd daeon
-Obsoletes:	%{oldlibname} < %{EVRD}
+Obsoletes:	%{oldlibname}
 
 %description -n %{libname}
 libusbmuxd is a library that provides support for the usbmuxd daeon
