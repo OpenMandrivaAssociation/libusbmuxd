@@ -8,8 +8,8 @@
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	2.0.3
-Release:	%{?git:0.%{git}.}2
+Version:	2.1.0
+Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/ 
