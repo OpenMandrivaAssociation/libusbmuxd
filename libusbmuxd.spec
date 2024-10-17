@@ -12,7 +12,7 @@ Version:	2.1.0
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
-Url:		http://www.libimobiledevice.org/ 
+Url:		https://www.libimobiledevice.org/ 
 %if 0%{?git:1}
 Source0:	https://github.com/libimobiledevice/libusbmuxd/archive/refs/heads/master.tar.gz#/%{name}-%{git}.tar.gz
 %else
