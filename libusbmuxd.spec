@@ -8,7 +8,7 @@
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
-Version:	2.1.0
+Version:	2.1.1
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -52,7 +52,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 %{name}, development headers and libraries.
 
 %prep
-%autosetup -p1 -n %{name}-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n libusbmuxd-master
 echo %{version} >.tarball-version
 ./autogen.sh
 %configure \
