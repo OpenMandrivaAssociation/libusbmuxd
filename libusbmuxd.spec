@@ -1,10 +1,11 @@
-%define major	6
+%define major	7
 %define api	2.0
 %define oldlibname %mklibname usbmuxd %{api} %{major}
 %define libname %mklibname usbmuxd %{api}
 %define devname %mklibname -d usbmuxd
 
-%define	git	20230802
+%define	git e478ab408ed	
+#20230802
 
 Summary:	Library for usbmuxd which communicates with Apple devices
 Name:		libusbmuxd
@@ -31,19 +32,19 @@ BuildRequires:	pkgconfig(libimobiledevice-glue-1.0)
 %description
 libusbmuxd provides support for the usbmuxd daemon
 that communicates with Apple devices.
-It allows simultaeneous access to multiple device
-services supported by libimobiledevice
+It allows simultaneous access to multiple device
+services supported by libimobiledevice.
 
 %package -n %{libname}
 Group:		System/Libraries
-Summary:	Library that provides support for the usbmuxd daeon
+Summary:	Library that provides support for the usbmuxd daemon.
 Obsoletes:	%{oldlibname}
 
 %description -n %{libname}
-libusbmuxd is a library that provides support for the usbmuxd daeon
+libusbmuxd is a library that provides support for the usbmuxd daemon.
 
 %package -n %{devname}
-Summary:	Development package for libusbmuxd
+Summary:	Development package for libusbmuxd.
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
